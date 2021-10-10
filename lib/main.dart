@@ -1,9 +1,10 @@
+import 'package:demo_1/Dummy2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
     title: "nitish",
-    home: MyApp(),
+    home: Flag(),
   ));
 }
 
@@ -31,6 +32,52 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class Flag extends StatefulWidget {
+  const Flag({Key? key}) : super(key: key);
+
+  @override
+  _FlagState createState() => _FlagState();
+}
+
+class _FlagState extends State<Flag> {
+  @override
+  Widget build(BuildContext context) {
+    var height = (MediaQuery.of(context).size.height -
+            MediaQuery.of(context).padding.top) /
+        3;
+    var width = MediaQuery.of(context).size.width;
+
+    return Scaffold(
+      backgroundColor: Colors.red,
+      body: SafeArea(
+          child: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.white,
+        child: Row(
+          children: [
+            Container(
+              width: width,
+              height: height,
+              color: Colors.orange,
+            ),
+            Container(
+              width: width,
+              height: height,
+              color: Colors.white,
+            ),
+            Container(
+              width: width,
+              height: height,
+              color: Colors.green,
+            )
+          ],
+        ),
+      )),
     );
   }
 }
