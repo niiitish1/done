@@ -1,10 +1,6 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MaterialApp());
-}
-
 class Box1 extends StatelessWidget {
   const Box1({Key? key}) : super(key: key);
 
@@ -103,41 +99,41 @@ class Box3 extends StatelessWidget {
   }
 }
 
-class Box4 extends StatelessWidget {
-  const Box4({Key? key}) : super(key: key);
+class IndiaFlag extends StatelessWidget {
+  const IndiaFlag({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     var height = (MediaQuery.of(context).size.height -
             MediaQuery.of(context).padding.top) /
         3;
-    var width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.orange,
       body: SafeArea(
-          child: Container(
-        width: double.infinity,
-        height: double.infinity,
-        color: Colors.white,
-        child: Row(
-          children: [
-            Container(
-              width: width,
-              height: height,
-              color: Colors.orange,
+          child: Column(
+        children: [
+          Container(
+            width: width,
+            height: height,
+            color: Colors.orange,
+          ),
+          Container(
+            width: width,
+            height: height,
+            color: Colors.white,
+            child: Icon(
+              Icons.circle,
+              color: Colors.blue,
+              size: 100,
             ),
-            Container(
-              width: width,
-              height: height,
-              color: Colors.white,
-            ),
-            Container(
-              width: width,
-              height: height,
-              color: Colors.green,
-            )
-          ],
-        ),
+          ),
+          Container(
+            width: width,
+            height: height,
+            color: Colors.green,
+          ),
+        ],
       )),
     );
   }
