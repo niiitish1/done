@@ -10,11 +10,12 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  TextEditingController userTEC = TextEditingController();
+  TextEditingController passTEC = TextEditingController();
+  String errorText = "";
+
   @override
   Widget build(BuildContext context) {
-    TextEditingController userTEC = TextEditingController();
-    TextEditingController passTEC = TextEditingController();
-    String errorText = "";
     return Scaffold(
       backgroundColor: Colors.red,
       body: SafeArea(
@@ -47,6 +48,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               ElevatedButton(
                 onPressed: () {
+                  print(userTEC.text);
                   if (userTEC.text.length == 0) {
                     setState(() {
                       errorText = "enter username";
