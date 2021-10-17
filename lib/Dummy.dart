@@ -157,17 +157,17 @@ class _RashiState extends State<Rashi> {
 
 class Choice {
   Choice({this.title, this.icon});
-  String title;
-  IconData icon;
+  String? title;
+  IconData? icon;
 }
 
 List<Choice> choices = <Choice>[
-  Choice(icon: Icons.add, title:"nitish"),
-  Choice(icon: Icons.add, title:"nitish"),
-  Choice(icon: Icons.add, title:"nitish"),
-  Choice(icon: Icons.add, title:"nitish"),
-  Choice(icon: Icons.add, title:"nitish"),
-  Choice(icon: Icons.add, title:"nitish"),
-  Choice(icon: Icons.add, title:"nitish"),
-  Choice(icon: Icons.add, title:"nitish"),
+  Choice(icon: Icons.add, title: "nitish"),
+  Choice(icon: Icons.add, title: "nitish"),
+  Choice(icon: Icons.add, title: "nitish"),
+  Choice(icon: Icons.add, title: "nitish"),
+  Choice(icon: Icons.add, title: "nitish"),
+  Choice(icon: Icons.add, title: "nitish"),
+  Choice(icon: Icons.add, title: "nitish"),
+  Choice(icon: Icons.add, title: "nitish"),
 ];
