@@ -1,4 +1,5 @@
 import 'package:demo_1/03_Login.dart';
+import 'package:demo_1/Dummy.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -8,14 +9,17 @@ void main() {
   // ignore: prefer_const_constructors
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: const LoginPage(),
+    home: const Rashi(),
   ));
   // SystemChrome.setSystemUIOverlayStyle(
   //     SystemUiOverlayStyle(systemNavigationBarColor: Colors.green));
-}
+}      
+
+  
 
 class MultiBox extends StatelessWidget {
   const MultiBox({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +33,7 @@ class MultiBox extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            /**
+            /**                                 
              * First ROW
              */
             Container(
