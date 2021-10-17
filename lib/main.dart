@@ -10,6 +10,7 @@ void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: const Rashi(),
+    //hello nitish babu
   ));
   // SystemChrome.setSystemUIOverlayStyle(
   //     SystemUiOverlayStyle(systemNavigationBarColor: Colors.green));
