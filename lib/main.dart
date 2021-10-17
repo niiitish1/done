@@ -20,6 +20,7 @@ void main() {
 class MultiBox extends StatelessWidget {
   const MultiBox({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
