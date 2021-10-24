@@ -1,4 +1,3 @@
-import 'package:demo_1/04_ui_design.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -6,7 +5,7 @@ void main() {
   // ignore: prefer_const_constructors
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: const Rashi(),
+    home: const MultiBoxInner(),
   ));
 }
 
@@ -64,19 +63,16 @@ class _MyHomeState extends State<MyHome> {
               javascriptMode: JavascriptMode.unrestricted,
               gestureNavigationEnabled: true,
               onProgress: (pro) {
-                print("progress $pro");
                 setState(() {
                   pro = pro;
                 });
               },
               onPageStarted: (url) {
-                print("page started");
                 setState(() {
                   isLoading = true;
                 });
               },
               onPageFinished: (url) {
-                print("pageFinished");
                 setState(() {
                   isLoading = false;
                 });
@@ -90,6 +86,70 @@ class _MyHomeState extends State<MyHome> {
               ),
               Center(child: Text("$pro")),
             ] //
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class MultiBoxInner extends StatefulWidget {
+  const MultiBoxInner({Key? key}) : super(key: key);
+
+  @override
+  _MultiBoxInnerState createState() => _MultiBoxInnerState();
+}
+
+class _MultiBoxInnerState extends State<MultiBoxInner> {
+  @override
+  Widget build(BuildContext context) {
+    var widht = MediaQuery.of(context).size.width;
+    var height =
+        MediaQuery.of(context).size.height - MediaQuery.of(context).padding.top;
+    return Scaffold(
+      body: SafeArea(
+        child: Stack(
+          children: [
+            Container(
+              width: double.infinity,
+              height: double.infinity,
+              color: Colors.red,
+            ),
+            Container(
+              width: widht - 50,
+              height: height - 50,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: widht - 100,
+              height: height - 100,
+              color: Colors.grey,
+            ),
+            Container(
+              width: widht - 150,
+              height: height - 150,
+              color: Colors.green,
+            ),
+            Container(
+              width: widht - 200,
+              height: height - 200,
+              color: Colors.black,
+            ),
+            Container(
+              width: widht - 250,
+              height: height - 250,
+              color: Colors.amber,
+            ),
+            Container(
+              width: widht - 300,
+              height: height - 300,
+              color: Colors.blue,
+            ),
+            Container(
+              width: widht - 350,
+              height: height - 350,
+              color: Colors.indigo,
+            ),
           ],
         ),
       ),
