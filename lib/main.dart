@@ -115,7 +115,7 @@ class _MultiBoxInnerState extends State<MultiBoxInner> {
               height: double.infinity,
               color: Colors.red,
             ),
-            Container(
+               Container(
               width: widht - 50,
               height: height - 50,
               color: Colors.yellow,
